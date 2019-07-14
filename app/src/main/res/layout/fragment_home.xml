@@ -1,74 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".home">
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout android:layout_height="wrap_content"
-                  android:orientation="vertical"
-                  android:layout_width="match_parent"
-    >
+    </data>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".home">
 
-        <com.google.android.material.navigation.NavigationView
-                android:layout_width="423dp"
-                android:layout_height="112dp" android:layout_weight="1">
-            <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/m" android:src="@drawable/round_menu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"/>
-            <TextView
-                    android:text="Tutorial app"
-                    android:layout_width="226dp"
-                    android:gravity="center"
-                    android:textSize="30sp"
-                    android:layout_height="94dp" android:id="@+id/textView3"
-                    android:layout_gravity="center"/>
-        </com.google.android.material.navigation.NavigationView>
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_height="622dp">
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+        >
+
+            <com.google.android.material.navigation.NavigationView
+                    android:layout_width="423dp"
+                    android:layout_height="112dp" android:layout_weight="1">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/m" android:src="@drawable/round_menu"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"/>
+                <TextView
+                        android:text="Tutorial app"
+                        android:layout_width="226dp"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:layout_height="94dp" android:id="@+id/textView3"
+                        android:layout_gravity="center"/>
+            </com.google.android.material.navigation.NavigationView>
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:layout_height="wrap_content">
-                <TextView
-                        android:text="Select difficulty:"
-                        android:layout_width="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_height="wrap_content" android:id="@+id/textView2"/>
-                <Button
-                        android:text="Beginner"
-                        android:textSize="20sp"
+                    android:layout_height="622dp">
+                <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/button"
-                        android:background="#24EEDD"/>
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:text="Select difficulty:"
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_height="wrap_content" android:id="@+id/textView2"/>
+                    <Button
+                            android:text="Beginner"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/button"
+                            android:background="#24EEDD"/>
+                    <Button
+                            android:text="Intermediate"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/button2"
+                            android:background="#FA3092DF"/>
+                    <Button
+                            android:text="Expert"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/button3"
+                            android:background="#6B34B8"/>
+                </LinearLayout>
                 <Button
-                        android:text="Intermediate"
-                        android:textSize="20sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/button2" android:background="#FA3092DF"/>
-                <Button
-                        android:text="Expert"
-                        android:textSize="20sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/button3" android:background="#6B34B8"/>
+                        android:text="Back"
+                        android:layout_width="163dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="100dp"
+                        android:layout_height="69dp" android:id="@+id/button4"/>
             </LinearLayout>
-            <Button
-                    android:text="Back"
-                    android:layout_width="163dp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="100dp"
-                    android:layout_height="69dp" android:id="@+id/button4"/>
         </LinearLayout>
-    </LinearLayout>
 
-</FrameLayout>
+    </FrameLayout>
+</layout>

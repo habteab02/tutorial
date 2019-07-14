@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -68,6 +69,7 @@ class home : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        //val binding: com.example.tutorialapp.databinding.FragmentHomeBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_home, container, false)
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
