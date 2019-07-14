@@ -3,10 +3,14 @@ package com.example.tutorialapp
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
+import androidx.navigation.findNavController
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -28,12 +32,34 @@ class home : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
-
+    lateinit var buttonm: ImageView
+    lateinit var button1: Button
+    lateinit var button_2: Button
+    lateinit var button_3: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        buttonm = m
+        button1 = button
+        button_2 = button2
+        button_3 = button3
+        buttonm.setOnClickListener{
+            it.findNavController().navigate(R.id.menu)
+        }
+        button1.setOnClickListener{
+            it.findNavController().navigate(R.id.detail)
+        }
+        button2.setOnClickListener{
+            it.findNavController().navigate(R.id.detail)
+        }
+        button3.setOnClickListener{
+            it.findNavController().navigate(R.id.detail)
         }
     }
 
@@ -52,11 +78,7 @@ class home : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }
+
     }
 
     override fun onDetach() {

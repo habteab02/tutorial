@@ -11,5 +11,9 @@
         <action android:id="@+id/action_home2_to_menu" app:destination="@id/menu"/>
     </fragment>
     <fragment android:id="@+id/detail" android:name="com.example.tutorialapp.detail" android:label="fragment_detail"
-              tools:layout="@layout/fragment_detail"/>
+              tools:layout="@layout/fragment_detail">
+        <action android:id="@+id/action_detail_to_moreDetail" app:destination="@id/moreDetail"/>
+    </fragment>
+    <fragment android:id="@+id/moreDetail" android:name="com.example.tutorialapp.moreDetail"
+              android:label="fragment_more_detail" tools:layout="@layout/fragment_more_detail"/>
 </navigation>

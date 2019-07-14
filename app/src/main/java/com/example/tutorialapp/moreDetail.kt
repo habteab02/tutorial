@@ -17,13 +17,13 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [detail.OnFragmentInteractionListener] interface
+ * [moreDetail.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [detail.newInstance] factory method to
+ * Use the [moreDetail.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class detail : Fragment() {
+class moreDetail : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -42,7 +42,7 @@ class detail : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail, container, false)
+        return inflater.inflate(R.layout.fragment_more_detail, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -52,11 +52,6 @@ class detail : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-//        if (context is OnFragmentInteractionListener) {
-//            listener = context
-//        } else {
-//            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-//        }
 
     }
 
@@ -88,12 +83,12 @@ class detail : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment detail.
+         * @return A new instance of fragment moreDetail.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            detail().apply {
+            moreDetail().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
